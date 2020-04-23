@@ -1,7 +1,7 @@
 import * as _ from '../utils/lodashWrap';
 import { format } from 'util';
 import { IConfiguration, ObjectIdentifier } from '../interfaces';
-
+// 配置基类
 export class BaseConfiguration implements IConfiguration {
   get size(): number {
     return 0;
@@ -62,7 +62,7 @@ export class BaseConfiguration implements IConfiguration {
     return null;
   }
 }
-
+// 配置基类
 export class BasicConfiguration extends BaseConfiguration {
   private innerConfig = new Map();
 

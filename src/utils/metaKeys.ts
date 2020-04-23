@@ -1,3 +1,4 @@
+//一些常量
 // Used for named bindings
 export const NAMED_TAG = 'named';
 

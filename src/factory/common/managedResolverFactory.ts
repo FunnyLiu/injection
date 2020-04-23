@@ -30,6 +30,7 @@ import { NotFoundError } from '../../utils/errorFactory';
 /**
  * 所有解析器基类
  */
+//具体product积累
 export class BaseManagedResolver implements IManagedResolver {
   protected _factory: ManagedResolverFactory;
 
@@ -71,6 +72,7 @@ class JSONResolver extends BaseManagedResolver {
 /**
  * 解析值
  */
+//具体produce
 class ValueResolver extends BaseManagedResolver {
   get type(): string {
     return KEYS.VALUE_ELEMENT;
@@ -122,6 +124,7 @@ class ValueResolver extends BaseManagedResolver {
 /**
  * 解析ref
  */
+//具体product
 class RefResolver extends BaseManagedResolver {
   get type(): string {
     return KEYS.REF_ELEMENT;
@@ -289,6 +292,7 @@ class ObjectResolver extends BaseManagedResolver {
 /**
  * 解析工厂
  */
+//具体factory
 export class ManagedResolverFactory {
   private resolvers = {};
   private _props = null;
@@ -303,6 +307,7 @@ export class ManagedResolverFactory {
     this.context = context;
 
     // 初始化解析器
+    // 每个解析器都是一个product
     this.resolvers = {
       json: new JSONResolver(this),
       value: new ValueResolver(this),

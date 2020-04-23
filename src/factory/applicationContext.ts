@@ -144,7 +144,7 @@ export class BaseApplicationContext implements IApplicationContext, IObjectFacto
     }
     return this._registry;
   }
-
+  //返回具体工厂ManagedResolverFactory
   protected getManagedResolverFactory() {
     if (!this._resolverFactory) {
       this._resolverFactory = new ManagedResolverFactory(this);
@@ -305,7 +305,7 @@ export class BaseApplicationContext implements IApplicationContext, IObjectFacto
       const properties = (definition.properties && definition.properties.keys().map((key) => {
         return definition.properties.get(key).name;
       })) || [];
-
+      //增加依赖
       this.dependencyMap.set(identifier, {
         name: typeof definition.path !== 'string' ? definition.path.name : identifier,
         scope: definition.scope,

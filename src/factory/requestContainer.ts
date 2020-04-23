@@ -12,7 +12,7 @@ export class RequestContainer extends Container {
     this.parent = applicationContext;
     this.applicationContext = applicationContext;
   }
-
+  //获取到依赖bind的项目
   get<T>(identifier: any, args?: any) {
     if (typeof identifier !== 'string') {
       identifier = this.getIdentifier(identifier);

@@ -1,3 +1,4 @@
+// 对象构建基类，具有初始化，销毁等逻辑
 import * as co from 'co';
 import * as is from 'is-type-of';
 import { IObjectCreator, IObjectDefinition } from '../interfaces';

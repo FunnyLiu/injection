@@ -1,3 +1,4 @@
+// 提供inject注解、装饰器
 import { INJECT_TAG } from '..';
 import { ObjectIdentifier } from '../interfaces';
 import { tagParameter, tagProperty } from '../utils/decorator';

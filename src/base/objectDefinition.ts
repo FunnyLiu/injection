@@ -1,3 +1,4 @@
+//提供ObjectDefinition类
 import { IObjectCreator, IObjectDefinition, ObjectIdentifier, Scope } from '../interfaces';
 import { ScopeEnum } from './scope';
 import { ObjectConfiguration } from './configuration';

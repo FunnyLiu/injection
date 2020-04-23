@@ -1,3 +1,5 @@
+// 所有的接口定义
+
 export type ObjectIdentifier = string;
 export type Scope = 'Singleton' | 'Request' | 'Prototype';
 
@@ -149,6 +151,7 @@ export interface IManagedInstance {
  * 解析内部管理的属性、json、ref等实例的解析器
  * 同时创建这些对象的实际使用的对象
  */
+//抽象product
 export interface IManagedResolver {
   type: string;
   resolve(managed: IManagedInstance): any;

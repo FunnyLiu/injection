@@ -12,7 +12,7 @@ const debug = require('debug')(`injection:Container:${process.pid}`);
 
 export class Container extends XmlApplicationContext implements IContainer {
   id = '';
-
+  //将目标绑定
   bind<T>(target: T, options?: ObjectDefinitionOptions): void;
   bind<T>(identifier: ObjectIdentifier, target: T, options?: ObjectDefinitionOptions): void;
   bind<T>(identifier: ObjectIdentifier, target: T, options?: ObjectDefinitionOptions): void {
@@ -24,7 +24,7 @@ export class Container extends XmlApplicationContext implements IContainer {
       identifier = this.getIdentifier(target);
       options = null;
     }
-
+    //根据是否是class，来指定ObjectDefinition或FunctionDefinition为definition
     if (is.class(target)) {
       definition = new ObjectDefinition();
     } else {

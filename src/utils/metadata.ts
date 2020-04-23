@@ -1,6 +1,6 @@
 import {NAMED_TAG} from './metaKeys';
 import {TagPropsMetadata as DecoratorMeta} from '../interfaces';
-
+// 元数据类
 class Metadata implements DecoratorMeta {
 
   public key: string | number | symbol;

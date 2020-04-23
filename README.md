@@ -10,46 +10,46 @@
 ├── src
 |  ├── annotation
 |  |  ├── index.ts
-|  |  ├── inject.ts
-|  |  ├── objectDef.ts
-|  |  └── provide.ts
+|  |  ├── inject.ts - 提供inject注解/装饰器
+|  |  ├── objectDef.ts - 提供对对象元数据的一系列操作函数
+|  |  └── provide.ts - 提供provide注解/装饰器
 |  ├── base
-|  |  ├── configuration.ts
+|  |  ├── configuration.ts - 提供配置基类BasicConfiguration
 |  |  ├── decoratorManager.ts
-|  |  ├── functionDefinition.ts
+|  |  ├── functionDefinition.ts - 提供FunctionDefinition类
 |  |  ├── messageSource.ts
-|  |  ├── objectCreator.ts
-|  |  ├── objectDefinition.ts
+|  |  ├── objectCreator.ts - 对象构建基类，具有初始化，销毁等逻辑
+|  |  ├── objectDefinition.ts - 提供ObjectDefinition类
 |  |  ├── resource.ts
-|  |  └── scope.ts
+|  |  └── scope.ts - 枚举类型
 |  ├── factory
-|  |  ├── applicationContext.ts
+|  |  ├── applicationContext.ts - 提供BaseApplicationContext类，提供getManagedResolverFactory方法，返回ManagedResolverFactory工厂实例
 |  |  ├── common
 |  |  |  ├── autowire.ts
 |  |  |  ├── constants.ts
 |  |  |  ├── managed.ts
-|  |  |  └── managedResolverFactory.ts
-|  |  ├── container.ts
-|  |  ├── requestContainer.ts
+|  |  |  └── managedResolverFactory.ts - 解析工厂ManagedResolverFactory类
+|  |  ├── container.ts - 提供Container，继承自XmlApplicationContext类
+|  |  ├── requestContainer.ts - 提供RequestContainer类，继承自Container类
 |  |  └── xml
 |  |     ├── example.xml
 |  |     ├── interface.ts
 |  |     ├── utils.ts
-|  |     ├── xmlApplicationContext.ts
+|  |     ├── xmlApplicationContext.ts - 提供XmlApplicationContext类，继承自BaseApplicationContext类
 |  |     ├── xmlObjectDefinition.ts
 |  |     ├── xmlObjectDefinitionParser.ts
 |  |     └── xmlObjectElementParser.ts
 |  ├── index.ts
-|  ├── interfaces.ts
+|  ├── interfaces.ts - 所有的接口定义
 |  ├── jsx.ts
 |  └── utils
-|     ├── decorator.ts
-|     ├── errMsg.ts
+|     ├── decorator.ts - 定义各种装饰器
+|     ├── errMsg.ts - 错误消息常量
 |     ├── errorFactory.ts
-|     ├── lodashWrap.ts
-|     ├── metaKeys.ts
-|     ├── metadata.ts
-|     ├── reflectTool.ts
+|     ├── lodashWrap.ts - 对依赖的lodash方法的包装
+|     ├── metaKeys.ts - 一些常量key
+|     ├── metadata.ts - 元数据类
+|     ├── reflectTool.ts - 运用reflect的util
 |     └── xmldomWrap.ts
 ├── tsconfig.json
 └── tslint.json

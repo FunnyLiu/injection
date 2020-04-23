@@ -10,7 +10,8 @@ import {
 } from '../interfaces';
 import { ScopeEnum } from './scope';
 import { ObjectCreator } from './objectCreator';
-
+//继承自对象构建基类，具有初始化，销毁等逻辑
+//definition还是由外部初始化时传入
 class FunctionWrapperCreator extends ObjectCreator {
 
   context;
