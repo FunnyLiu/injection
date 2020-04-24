@@ -12,6 +12,7 @@ import { ScopeEnum } from './scope';
 import { ObjectCreator } from './objectCreator';
 //继承自对象构建基类，具有初始化，销毁等逻辑
 //definition还是由外部初始化时传入
+//桥接模式之“精确抽象”部分
 class FunctionWrapperCreator extends ObjectCreator {
 
   context;
@@ -51,6 +52,7 @@ export class FunctionDefinition implements IObjectDefinition {
 
   constructor(context: IApplicationContext) {
     this.context = context;
+    //FunctionWrapperCreator为“具体抽象”，this所指的FunctionDefinition为“具体实现”
     this.creator = new FunctionWrapperCreator(this, context);
   }
 

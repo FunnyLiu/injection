@@ -2,10 +2,10 @@
 import * as co from 'co';
 import * as is from 'is-type-of';
 import { IObjectCreator, IObjectDefinition } from '../interfaces';
-
+//桥接模式的“抽象部分”
 export class ObjectCreator implements IObjectCreator {
   protected definition: IObjectDefinition;
-
+  //管理着一个指向“实现部分”层次结构中对象的引用
   constructor(definition: IObjectDefinition) {
     this.definition = definition;
   }

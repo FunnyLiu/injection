@@ -25,6 +25,7 @@ export class Container extends XmlApplicationContext implements IContainer {
       options = null;
     }
     //根据是否是class，来指定ObjectDefinition或FunctionDefinition为definition
+    //ObjectDefinition和FunctionDefinition为桥接模式两个不同的“具体实现”
     if (is.class(target)) {
       definition = new ObjectDefinition();
     } else {
